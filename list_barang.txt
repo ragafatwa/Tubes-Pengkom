@@ -1,0 +1,8 @@
+item_id,nama,harga,stok,
+1001,ed,10000,7
+1002,pisang,15000,30
+1003,ed,10000,8
+1004,sssssss ssss sss,10000,17
+1005,ed o s,2000,30
+1007,sugondis,100000,10
+1008,hujan,90000,20
