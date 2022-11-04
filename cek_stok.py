@@ -45,6 +45,7 @@ def init_object():
 
 # Fungsi untuk nge cek 1 item ada atau habis
 def cek_stok(item_id, qty):
+    item_id = item_id
     try:
         if item_list[item_id]['stok'] > 0 and item_list[item_id]['stok'] - qty >= 0:
             return [True, item_list[item_id]['stok']]

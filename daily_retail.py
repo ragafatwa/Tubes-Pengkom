@@ -150,5 +150,3 @@ def main():
     elif pilihan == 3:
         tahun = int(input("Silahkan Masukkan Tahun (angka): "))
         per_month(tahun, df)
-
-main()
