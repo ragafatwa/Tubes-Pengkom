@@ -1,9 +1,8 @@
 item_id,nama,harga,stok,
-1000,Pisang Goreng,15000,2
-1001,pisang,5,0
-1002,pisang,15000,30
-1003,ed,10000,8
-1004,sssssss ssss sss,10000,17
-1005,ed o s,2000,30
-1007,sugondis,100000,10
-1008,hujan,90000,20
+1000,Oreo,7500,10
+1001,Biskuat,4500,29
+1002,Indomie Goreng,3500,3
+1003,Teh Pucuk,4000,3
+1004,Teh Botol,5000,30
+1005,Ultra Milk 125ml,3000,8
+1006,Oreo Supreme,700000,0

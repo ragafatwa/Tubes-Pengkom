@@ -22,9 +22,9 @@ def tampilan():
 def show_daftar_belanja():
     clear.cls()
     # Judul
-    print("=================================================")
-    print("||               Daftar Belanja                ||")
-    print("=================================================")
+    print("=====================================================")
+    print("||                 Daftar Belanja                  ||")
+    print("=====================================================")
 
     i = 1
     for x in daftar_belanja:
@@ -35,11 +35,11 @@ def show_daftar_belanja():
         '|' +
         str('\t' + str(x[1])).expandtabs(2).ljust(4) +
         '|' + '\t'.expandtabs(3) +
-        'Rp{:,.1f}'.format(x[2]).ljust(9) +
+        'Rp{:,.1f}'.format(x[2]).ljust(13) +
         "||")
         i += 1
 
-    print("=================================================")
+    print("=====================================================")
 
 def kamera():
     import cv2
@@ -84,16 +84,22 @@ def terima_masukan():
     clear.cls()
     tampilan()
 
-    print("Masukkan kode item: ", end=" ")
-    id = kamera()
-    id = id[8:12]
-    print(id)
-    if id == '':
+    scan = input("Scan barcode? y/n: ")
+    if scan == "y" or scan == 1:
+        print("Masukkan kode item: ", end=" ")
+        id = kamera()
+        id = id[8:12]
+        print(id)
+        if id == '':
+            id = input("Masukkan kode item: ")
+    else:
         id = input("Masukkan kode item: ")
     
     while True:
         try:
             qty = int(input("Masukkan jumlah: "))
+            while qty == 0:
+                qty = int(input("Masukkan jumlah: "))
             diskon = float(input("Masukkan diskon item: "))
             break
         except:
@@ -196,6 +202,9 @@ def sistem_user():
     if metode == '1':
         print("Masukkan jumlah uang")
         uang = float(input("> "))
+        while uang < total_harga:
+            print("Masukkan jumlah uang dengan benar")
+            uang = float(input("> "))
 
         # cetak struk
         payment.receipt(daftar_belanja, diskon, total_harga, uang)

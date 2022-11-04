@@ -36,22 +36,22 @@ def receipt(arr, diskon, tot, uang):
     daily_retail.save_data(arr, diskon, tot)
     # Judul
     date = datetime.datetime.now()
-    print("=================================================")
-    print("||                Struk Belanja                ||")
-    print("||---------------------------------------------||")
-    print(f"||          {date}         ||")
-    print("=================================================")
+    print("=====================================================")
+    print("||                  Struk Belanja                  ||")
+    print("||-------------------------------------------------||")
+    print(f"||            {date}           ||")
+    print("=====================================================")
 
     i = 1
     for x in arr:
         print("||" + str('\t' + str(i)).expandtabs(2).ljust(4) + '|' +
-              str('\t' + x[0]).expandtabs(3).ljust(22) + '|' +
+              str('\t' + x[0]).expandtabs(3).ljust(24) + '|' +
               str('\t' + str(x[1])).expandtabs(2).ljust(4) + '|' +
-              str('\t' + 'Rp' + str(x[2])).expandtabs(2).ljust(11) + " ||")
+              str('\t' + 'Rp' + str(x[2])).expandtabs(2).ljust(14) + "||")
         i += 1
 
-    print("=================================================")
-    print(f"||  Total Harga :                      {tot + diskon}")
-    print(f"||  Diskon      :                      {diskon}")
-    print(f"||  Tunai       :                      {uang}")
-    print(f"||  Kembalian   :                      {kembalian}\n\n")
+    print("=====================================================")
+    print(f"||  Total Harga :                        {tot + diskon}")
+    print(f"||  Diskon      :                        {diskon}")
+    print(f"||  Tunai       :                        {uang}")
+    print(f"||  Kembalian   :                        {kembalian}\n\n")

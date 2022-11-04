@@ -30,7 +30,7 @@ def main():
             user.daftar_belanja = []
             user.sistem_user()
             next = input("Lanjut? y / n: ")
-            if next == 'n':
+            if next == 'n' or next == 0:
                 isRun = False
     else:
         clear.cls()
